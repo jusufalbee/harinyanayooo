@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #010718;
+            overflow-y: scroll; /* Make body scrollable */
+        }
+
+        .header {
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 30px; /* Adjusted padding */
+        }
+
+        p {
+            font-size: 20px;
+            text-align: justify;
+            color: whitesmoke;
+            margin: 20px 0; /* Add some margin between paragraphs */
+        }
+
+        .bawah {
+            padding-left: 15%;
+            padding-right: 15%;
+        }
+
+        .container {
+        }
+
+        .container .text {
+            position: relative;
+            color: gold;
+            font-size: 40px;
+            font-weight: 600;
+            padding-bottom: 10px; /* Adjusted padding */
+        }
+
+        .container .text.first-text {
+            color: whitesmoke;
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+
+        .text.sec-text:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #010718;
+            border-left: 2px solid gold;
+            animation: animate 4s steps(12) infinite;
+        }
+
+        @keyframes animate {
+            40%, 60% {
+                left: 100%
+            }
+            100% {
+                left: 0%
+            }
+        }
+
+        /* Button styles */
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 20px; /* Adjusted margin */
+        }
+
+        .button {
+            background-color: #0066FF; /* Same as "Kanjeng Ratu" */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0044CC; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="atas">
+        <div class="header">
+            <div class="container">
+                <span class="text first-text">Serta Mulia,</span> <!-- Adjusted padding -->
+                <span class="text sec-text">Kanjeng Ratu 👑</span>
+            </div>
+        </div>
+    </div>
+    <div class="bawah">
+        <p>Semoga, di umur yang semakin dewasa ini makin deket sama Allah, makin deket dengan apa yang dicita-citain dari dulu, dan yang pasti makin sabar sama gua 🥳</p>
+        <p>Matur nuwun lan nyuwun pangapunten yaaa, udah banyak bgt bgt bgt jasanya buat gua, banyak bgt capenya cuma buat bantuin gua, banyak bgt emosinya cuma karena gua rese 😴</p>
+        <p>Yang paling penting, gua cuma mau bilang kalo lu itu <span style="color: cyan;">CANTIK AND PERECT BGT BGT BGT</span>, gua gamau denger insecurity lu yang isinya bullshit abis itu. THANKYOU FOR EVERYTHING YAAA <span style="color: cyan;">CANTIK 😸</span></p>
+    </div>
+    <br>
+    <br>
+    <div class="button-container">
+        <a href="bunga.html"><button class="button" >MAU BUNGA NDAA 💐</button></a>
+    </div>
+    <script>
+        const text = document.querySelector(".sec-text");
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Kanjeng Ratu 👑";
+            }, 0);
+            setTimeout(() => {
+                text.textContent = "Aquiiiila 👀";
+            }, 4000);
+            setTimeout(() => {
+                text.textContent = "Nayoooo 😸";
+            }, 8000);
+            setTimeout(() => {
+                text.textContent = "Aqila Ainayya Zhafirah 🧑‍🎨";
+            }, 12000);
+        }
+        textLoad();
+        setInterval(textLoad, 16000);
+    </script>
+</body>
+</html>
